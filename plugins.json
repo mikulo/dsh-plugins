@@ -1,0 +1,33 @@
+{
+  "$comment": "mikulo 的 DSH 插件清单。install.mjs 读取本文件批量安装；新增插件时在 plugins 数组追加一项，并同步更新 README.md 的表格。",
+  "defaultProfile": "web",
+  "plugins": [
+    {
+      "name": "@mikulo/dsh-thinking-effort",
+      "source": "github:mikulo/dsh-thinking-effort",
+      "repo": "https://github.com/mikulo/dsh-thinking-effort",
+      "description": "为 llm-pi-ai 第三方模型补充可配置的思考强度档位，并设置子 agent 默认思考强度。",
+      "replaces": ["@hytime/dsh-thinking-effort", "dsh-thinking-effort"],
+      "conflicts": [],
+      "notes": "设置保存在 profile cordis.patch.yml 的 `id: thinking-effort` 条目里；从旧包迁移时安装脚本会把该条目的 name 改成新包名以保留设置。"
+    },
+    {
+      "name": "@mikulo/dsh-easyrewrite",
+      "source": "github:mikulo/dsh-easyrewrite",
+      "repo": "https://github.com/mikulo/dsh-easyrewrite",
+      "description": "DSH Web 消息撤回与气泡原位编辑、版本翻页器。",
+      "replaces": ["dsh-easyrewrite"],
+      "conflicts": [],
+      "notes": "设置保存在浏览器 localStorage（dsh-easyrewrite: 前缀），重装不会丢失。"
+    },
+    {
+      "name": "@mikulo/dsh-ssh",
+      "source": "github:mikulo/dsh-ssh",
+      "repo": "https://github.com/mikulo/dsh-ssh",
+      "description": "SSH 主机管理、Web 终端、SFTP 传输、端口转发、集群执行，以及 ssh_* Agent 工具。",
+      "replaces": ["@linxin666/dsh-ssh"],
+      "conflicts": ["@linxin666/dsh-web-all", "@linxin666/dsh-web-ui-all"],
+      "notes": "主机配置在 ~/.dsh/dsh-ssh.json，重装不会丢失。与上游全家桶同时安装会重复注册 ssh_* 工具。ssh2 的可选依赖 cpu-features 在没有 C++ 编译器时会报编译失败，可以忽略。"
+    }
+  ]
+}
