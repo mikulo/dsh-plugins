@@ -13,6 +13,7 @@ DSH 目前还是 alpha 版本，升级时经常有破坏式更新，升级后往
 | `@mikulo/dsh-thinking-effort` | [mikulo/dsh-thinking-effort](https://github.com/mikulo/dsh-thinking-effort) | 为 llm-pi-ai 第三方模型补充可配置的思考强度档位，并设置子 agent 默认思考强度 |
 | `@mikulo/dsh-easyrewrite` | [mikulo/dsh-easyrewrite](https://github.com/mikulo/dsh-easyrewrite) | DSH Web 消息撤回、气泡原位编辑、版本翻页器 |
 | `@mikulo/dsh-ssh` | [mikulo/dsh-ssh](https://github.com/mikulo/dsh-ssh) | SSH 主机管理、Web 终端、SFTP、端口转发、集群执行，以及 `ssh_*` Agent 工具 |
+| `@mikulo/dsh-prompt-switcher` | [mikulo/dsh-prompt-switcher](https://github.com/mikulo/dsh-prompt-switcher) | 新对话中输入 `/` 选择本地 `.md` 提示词模板，约束力等同于 AGENTS.md 并对整个对话生效；设置页可配置目录、开关和编辑模板 |
 
 机器可读的清单在 [plugins.json](plugins.json)，安装脚本读的就是它。
 
@@ -63,7 +64,7 @@ irm https://raw.githubusercontent.com/mikulo/dsh-plugins/main/install.mjs | node
 ## 手动安装（不用脚本）
 
 ```sh
-dsh plugin --profile web add github:mikulo/dsh-thinking-effort github:mikulo/dsh-easyrewrite github:mikulo/dsh-ssh
+dsh plugin --profile web add github:mikulo/dsh-thinking-effort github:mikulo/dsh-easyrewrite github:mikulo/dsh-ssh github:mikulo/dsh-prompt-switcher
 ```
 
 更新：`dsh plugin --profile web update @mikulo/dsh-ssh`；卸载：`dsh plugin --profile web remove @mikulo/dsh-ssh`。

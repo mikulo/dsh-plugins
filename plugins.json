@@ -28,6 +28,15 @@
       "replaces": ["@linxin666/dsh-ssh"],
       "conflicts": ["@linxin666/dsh-web-all", "@linxin666/dsh-web-ui-all"],
       "notes": "主机配置在 ~/.dsh/dsh-ssh.json，重装不会丢失。与上游全家桶同时安装会重复注册 ssh_* 工具。ssh2 的可选依赖 cpu-features 在没有 C++ 编译器时会报编译失败，可以忽略。"
+    },
+    {
+      "name": "@mikulo/dsh-prompt-switcher",
+      "source": "github:mikulo/dsh-prompt-switcher",
+      "repo": "https://github.com/mikulo/dsh-prompt-switcher",
+      "description": "新对话中输入 / 选择本地 .md 提示词模板，约束力等同于 AGENTS.md 并对整个对话生效；设置页可配置模板目录、激活开关和编辑模板。",
+      "replaces": ["dsh-prompt-switcher"],
+      "conflicts": [],
+      "notes": "设置（模板目录、激活开关、置顶）保存在 ~/.dsh/dsh-prompt-switcher.json，重装不会丢失；模板文件在你自己的目录里，插件不会复制或删除。更新后必须重启 dsh web，Host 半才会加载新代码。"
     }
   ]
 }
