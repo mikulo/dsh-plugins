@@ -24,10 +24,10 @@
       "name": "@mikulo/dsh-ssh",
       "source": "github:mikulo/dsh-ssh",
       "repo": "https://github.com/mikulo/dsh-ssh",
-      "description": "SSH 主机管理、Web 终端、SFTP 传输、端口转发、集群执行，以及 ssh_* Agent 工具。",
+      "description": "SSH 主机管理、Web 终端、SFTP 传输、端口转发、集群执行、ssh_* Agent 工具，以及「远程WEB」：经自建中继服务端从手机 / 浏览器查看本机对话并发送指令（本机无需公网 IP）。",
       "replaces": ["@linxin666/dsh-ssh"],
       "conflicts": ["@linxin666/dsh-web-all", "@linxin666/dsh-web-ui-all"],
-      "notes": "主机配置在 ~/.dsh/dsh-ssh.json，重装不会丢失。与上游全家桶同时安装会重复注册 ssh_* 工具。ssh2 的可选依赖 cpu-features 在没有 C++ 编译器时会报编译失败，可以忽略。"
+      "notes": "主机配置在 ~/.dsh/dsh-ssh.json，远程WEB 设置在 ~/.dsh/dsh-ssh-relay.json（含密码，0600），重装都不会丢失。远程WEB 需另在 Linux VPS 部署中继服务端（见插件仓库 README「服务端部署」）。安装或更新后需重启 dsh web。与上游全家桶同时安装会重复注册 ssh_* 工具。ssh2 的可选依赖 cpu-features 在没有 C++ 编译器时会报编译失败，可以忽略。"
     },
     {
       "name": "@mikulo/dsh-prompt-switcher",
