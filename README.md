@@ -14,6 +14,7 @@ DSH 目前还是 alpha 版本，升级时经常有破坏式更新，升级后往
 | `@mikulo/dsh-easyrewrite` | [mikulo/dsh-easyrewrite](https://github.com/mikulo/dsh-easyrewrite) | DSH Web 消息撤回、气泡原位编辑、版本翻页器 |
 | `@mikulo/dsh-ssh` | [mikulo/dsh-ssh](https://github.com/mikulo/dsh-ssh) | SSH 主机管理、Web 终端、SFTP、端口转发、集群执行、`ssh_*` Agent 工具，以及「远程WEB」：经自建中继服务端从手机 / 浏览器查看本机对话并发送指令 |
 | `@mikulo/dsh-prompt-switcher` | [mikulo/dsh-prompt-switcher](https://github.com/mikulo/dsh-prompt-switcher) | 新对话中输入 `/` 选择本地 `.md` 提示词模板，约束力等同于 AGENTS.md 并对整个对话生效；支持全局提示词、`{{env:变量名}}` 环境变量替换，通过 WebDAV 同步模板和环境变量文件，以及可选的删除对话（对话菜单「删除对话」、视图选项「删除所有已归档」） |
+| `@mikulo/dsh-translator` | [mikulo/dsh-translator](https://github.com/mikulo/dsh-translator) | AI 每段回复（不含思维链）右下方增加「翻译」和「替换原文」按钮：用已配置的模型翻译成所选语言，译文显示在原文下方，或在原处替换显示（只改变显示，不影响对话上下文） |
 
 机器可读的清单在 [plugins.json](plugins.json)，安装脚本读的就是它。
 
@@ -64,7 +65,7 @@ irm https://raw.githubusercontent.com/mikulo/dsh-plugins/main/install.mjs | node
 ## 手动安装（不用脚本）
 
 ```sh
-dsh plugin --profile web add github:mikulo/dsh-thinking-effort github:mikulo/dsh-easyrewrite github:mikulo/dsh-ssh github:mikulo/dsh-prompt-switcher
+dsh plugin --profile web add github:mikulo/dsh-thinking-effort github:mikulo/dsh-easyrewrite github:mikulo/dsh-ssh github:mikulo/dsh-prompt-switcher github:mikulo/dsh-translator
 ```
 
 更新：`dsh plugin --profile web update @mikulo/dsh-ssh`；卸载：`dsh plugin --profile web remove @mikulo/dsh-ssh`。

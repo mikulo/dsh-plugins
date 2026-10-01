@@ -37,6 +37,15 @@
       "replaces": ["dsh-prompt-switcher"],
       "conflicts": [],
       "notes": "设置（模板目录、激活开关、置顶、全局提示词、WebDAV、允许删除对话开关）保存在 ~/.dsh/dsh-prompt-switcher.json，环境变量保存在 ~/.dsh/dsh-prompt-switcher.env.json，重装不会丢失；模板文件在你自己的目录里，插件不会复制或删除。删除对话默认关闭，需在「设置 → 提示词模板 → 允许删除对话」中开启，删除不可撤销。更新后必须重启 dsh web，Host 半才会加载新代码。"
+    },
+    {
+      "name": "@mikulo/dsh-translator",
+      "source": "github:mikulo/dsh-translator",
+      "repo": "https://github.com/mikulo/dsh-translator",
+      "description": "AI 每段回复（不含思维链）右下方增加「翻译」和「替换原文」按钮：用 设置 → 模型 中已配置的模型翻译成所选语言，译文显示在原文下方，或在原处替换显示（只改变显示，不影响对话上下文）。",
+      "replaces": [],
+      "conflicts": [],
+      "notes": "设置（翻译模型、思考强度、目标语言、翻译提示词、超时、只翻译英文开关）保存在 ~/.dsh/dsh-translator.json，重装不会丢失；译文缓存在浏览器 localStorage（dsh-translator.cache.v1，最近 200 条）。安装或更新后需重启 dsh web，Host 半才会加载新代码。"
     }
   ]
 }
